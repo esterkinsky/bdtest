@@ -55,20 +55,23 @@ export const AddOperator: React.FC = () => {
   };
 
   return (
-    <div className={styles.addoperatordiv}>
-      <P size="l" className={styles.add}>
-        Add new operator
-      </P>
-      <form className={styles.card} onSubmit={addOperator}>
-        <Input
-          type={"text"}
-          placeholder={"Enter operator's name"}
-          value={name}
-          handler={changeInputValue}
-        />
-        <Button appearance="primary">Add</Button>
-      </form>
+    <>
+      {" "}
+      <div className={styles.addoperatordiv}>
+        <P size="l" className={styles.add}>
+          Add new operator
+        </P>
+        <form className={styles.card} onSubmit={addOperator}>
+          <Input
+            type={"text"}
+            placeholder={"Enter operator's name"}
+            value={name}
+            handler={changeInputValue}
+          />
+          <Button appearance="primary">Add</Button>
+        </form>
+      </div>
       {alertName && <Alert alertMessage={alertName} closeAlert={closeAlert} />}
-    </div>
+    </>
   );
 };

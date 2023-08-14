@@ -8,7 +8,7 @@ export interface IAlertProps {
 
 export const Alert: React.FC<IAlertProps> = (props) => {
   useEffect(() => {
-    const timerId = setTimeout(props.closeAlert, 2000);
+    const timerId = setTimeout(props.closeAlert, 99000);
 
     return () => {
       clearTimeout(timerId);
