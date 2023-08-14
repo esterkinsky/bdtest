@@ -4,12 +4,14 @@ import { useRouter } from "next/router";
 import { Preloader } from "../Preloader/Preloader";
 import styles from "./PayCard.module.css";
 import { Button } from "@/components/UI/Button/Button";
+import { Alert } from '@/components';
 
 export function PayCard() {
   const [phoneState, setPhoneState] = useState<string>("");
   const [cardState, setCardState] = useState<string>("•••• •••• •••• ••••");
   const [isPayedState, setIsPayedState] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
+   const [alertName, setAlertName] = useState("");
   const router = useRouter();
 
   const handleInputPhone = (event: {
@@ -54,33 +56,36 @@ export function PayCard() {
       const isValidCard = /\d{4}\s\d{4}\s\d{4}\s\d{4}/.test(cardState);
 
       if (!isValidPhone) {
-        alert("Your mobile number is not valid");
+		setAlertName("Your mobile number is not valid")
         setIsLoading(false);
         setPhoneState("");
         return;
       }
 
       if (!isValidCard) {
-        alert("Your card number is not valid");
+        setAlertName("Your card number is not valid");
         setIsLoading(false);
         setCardState("•••• •••• •••• ••••");
         return;
       }
 
       if (!isPayedState) {
-        alert("Not enough money");
+        setAlertName("Not enough money");
       }
       if (isPayedState) {
-        alert("succes");
+        setAlertName("succes");
         router.back();
       }
       setCardState("•••• •••• •••• ••••");
       setPhoneState("");
-      console.log(isPayedState);
     } catch (err) {
       console.error(err);
     }
   }
+
+   const closeAlert = () => {
+     setAlertName("");
+   };
 
   return (
     <>
@@ -126,6 +131,7 @@ export function PayCard() {
           </div>
         </div>
       </div>
+      {alertName && <Alert alertMessage={alertName} closeAlert={closeAlert} />}
     </>
   );
 }
