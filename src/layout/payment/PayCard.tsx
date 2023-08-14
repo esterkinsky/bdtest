@@ -127,15 +127,14 @@ export function PayCard() {
               className={styles.input}
             />
             <InputMask
-              mask="9999"
+              mask=""
               type="text"
               placeholder="Amount"
               value={amountState}
               onChange={handleIputAmount}
               className={styles.input}
             />
-
-            <Button $primary id="confirmButton">
+            <Button $primary >
               Подтвердить
             </Button>
           </form>
