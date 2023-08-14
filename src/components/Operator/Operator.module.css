@@ -1,0 +1,31 @@
+.operator {
+  display: block;
+}
+
+.svg {
+  display: flex;
+  justify-content: left;
+  margin-left: 10px;
+  height: 30px;
+  width: 30px;
+}
+
+.operatorcard {
+  display: flex;
+  padding: 12px 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.operatorcard:hover {
+  background-color: darken(#3d2525, 2%);
+}
+
+.operatorcard:active {
+  background-color: darken(#f9f9f9, 5%);
+}
+
+.imgdiv {
+  display: "flex";
+  align-items: "center";
+}

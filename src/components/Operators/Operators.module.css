@@ -1,0 +1,25 @@
+.operators {
+  transition: all 0.2s ease-in-out;
+  max-width: 100%;
+}
+
+.title {
+  font-family: "Nunito" sans-serif;
+  text-align: left;
+}
+
+.card_wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  max-width: 50vw;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  outline: none;
+  font-family: "Nunito" sans-serif;
+  overflow-x: auto;
+}

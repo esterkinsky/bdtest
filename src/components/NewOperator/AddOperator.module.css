@@ -1,0 +1,15 @@
+.addoperatordiv {
+  transition: all 0.2s ease-in-out;
+  max-width: 100%;
+}
+
+.add {
+  font-family: "Nunito" sans-serif;
+  text-align: left;
+}
+
+.card {
+  align-items: center;
+  margin-top: 15px;
+  gap: 15px;
+}

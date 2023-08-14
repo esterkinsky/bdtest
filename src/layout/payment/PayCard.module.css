@@ -1,0 +1,53 @@
+.input {
+  margin: 10px;
+  color: var(--black);
+  border: none;
+  border-radius: 5px;
+  outline-color: var(--primary);
+  background: var(--white);
+  box-shadow: 0 4px 4px rgb(0 0 0 / 5%);
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.input::placeholder {
+  color: var(--gray);
+}
+
+.default {
+  display: flex;
+  flex-direction: column;
+  background: var(--gray-light);
+  width: 330px;
+  border-radius: 20px;
+  height: 200px;
+  color: var(--gray-dark);
+  font-family: "Nunito";
+  text-align: left;
+}
+
+.form {
+  padding-bottom: 15px;
+}
+
+@media (max-width: 400px) {
+  .default {
+    display: none;
+  }
+}
+
+.paymentscreen {
+  padding-bottom: 15px;
+}
+
+.name {
+  margin: 15px 15px;
+  font-size: 25px;
+  font-family: "Nunito";
+}
+
+.card {
+  margin-left: 15px;
+  font-size: 25px;
+}

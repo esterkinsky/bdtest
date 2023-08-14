@@ -1,0 +1,15 @@
+.alert {
+  position: fixed;
+  right: 7rem;
+  width: auto;
+  height: 30px;
+  background-color: var(--gray-light);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 6px 6px;
+  top: 5rem !important;
+  animation: fade-in 250ms ease-in-out;
+}
