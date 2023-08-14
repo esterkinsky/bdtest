@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Operator.module.css";
-import { P } from "../UI/P/PStyle";
+import { P } from "../UI/P/P";
 
 interface IProps {
   name: string;

@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { Input } from "../UI/Input/Input";
 import styles from "./AddOperator.module.css";
 import { Alert } from "../Alert/Alert";
-import { P } from "../UI/P/PStyle";
+import { P } from "../UI/P/P";
 import { Button } from "../UI/Button/Button";
 
 export const AddOperator: React.FC = () => {

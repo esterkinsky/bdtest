@@ -1,4 +1,4 @@
-import { P } from "@/components/UI/P/PStyle";
+import { P } from "@/components/UI/P/P";
 import styles from "./Header.module.css";
 
 export const Header = () => {

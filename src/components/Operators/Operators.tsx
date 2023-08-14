@@ -2,7 +2,7 @@ import React from "react";
 import { Operator } from "../Operator/Operator";
 import { operators } from "../../interfaces/Operators";
 import styles from "./Operators.module.css";
-import { P } from "../UI/P/PStyle";
+import { P } from "../UI/P/P";
 
 export const Operators: React.FC = () => {
   return (
