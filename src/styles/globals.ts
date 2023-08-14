@@ -1,0 +1,39 @@
+import { createGlobalStyle } from "styled-components";
+
+export const Globalstyle = createGlobalStyle`
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--black);
+  background: #e5e5e5;
+  font-family: "Nunito", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #3b434e;
+  --gray-light: #c7c1c1;
+  --gray: #a4a4a4;
+  --gray-dark: #6c7077;
+  --white: white;
+  --primary: #687baf;
+  --primary-hover: #384979;
+  --red: #ff3e38;
+  --green-light: #53db75;
+  --font-family: "Nunito", sans-serif;
+}
+
+media:{
+	descr: '(max-width: px)',
+	card: '(max-width: px)',
+}
+`;

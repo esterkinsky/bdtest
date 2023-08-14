@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { Input } from "../UI/Input/Input";
 import styles from "./AddOperator.module.css";
 import { Alert } from "../Alert/Alert";
-import { P } from "../UI/P/P";
+import { P } from "../UI/P/PStyle";
 import { Button } from "../UI/Button/Button";
 
 export const AddOperator: React.FC = () => {
@@ -58,7 +58,7 @@ export const AddOperator: React.FC = () => {
     <>
       {" "}
       <div className={styles.addoperatordiv}>
-        <P size="l" className={styles.add}>
+        <P $l className={styles.add}>
           Add new operator
         </P>
         <form className={styles.card} onSubmit={addOperator}>
@@ -68,7 +68,7 @@ export const AddOperator: React.FC = () => {
             value={name}
             handler={changeInputValue}
           />
-          <Button appearance="primary">Add</Button>
+          <Button $ghost>Add</Button>
         </form>
       </div>
       {alertName && <Alert alertMessage={alertName} closeAlert={closeAlert} />}

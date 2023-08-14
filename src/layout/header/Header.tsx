@@ -1,4 +1,4 @@
-import { P } from "@/components/UI/P/P";
+import { P } from "@/components/UI/P/PStyle";
 import styles from "./Header.module.css";
 
 export const Header = () => {
@@ -8,7 +8,7 @@ export const Header = () => {
         <div className={styles.logo}>
           <div>
             <h1>NamePay</h1>
-            <P size="m">mobile phone payment terminal</P>
+            <P $s>mobile phone payment terminal</P>
           </div>
         </div>
       </div>

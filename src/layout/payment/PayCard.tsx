@@ -105,7 +105,7 @@ export function PayCard() {
               onChange={handleInputNumber}
               className={styles.input}
             />
-            <Button appearance="primary" id="confirmButton">
+            <Button $primary id="confirmButton">
               Подтвердить
             </Button>
           </form>

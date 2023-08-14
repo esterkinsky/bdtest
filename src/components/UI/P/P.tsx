@@ -1,32 +1,27 @@
 import { DetailedHTMLProps, HTMLAttributes, ReactNode } from "react";
-import styles from "./P.module.css";
-import cn from "classnames";
+import { PStyle } from './PStyle';
 
 export interface PProps
   extends DetailedHTMLProps<
     HTMLAttributes<HTMLParagraphElement>,
     HTMLParagraphElement
   > {
-  size?: "s" | "m" | "l";
+  size?: "$s" | "$m" | "$l";
   children: ReactNode;
 }
 
 export const P = ({
-  size = "m",
+  size = "$m",
   children,
   className,
   ...props
 }: PProps): JSX.Element => {
   return (
-    <p
-      className={cn(styles.p, className, {
-        [styles.s]: size == "s",
-        [styles.m]: size == "m",
-        [styles.l]: size == "l",
-      })}
+    <PStyle
+      
       {...props}
     >
       {children}
-    </p>
+    </PStyle>
   );
 };

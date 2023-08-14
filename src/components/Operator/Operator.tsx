@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Operator.module.css";
-import { P } from "../UI/P/P";
+import { P } from "../UI/P/PStyle";
 
 interface IProps {
   name: string;
@@ -16,7 +16,7 @@ export const Operator: React.FC<IProps> = (props) => {
     <div className={styles.operator}>
       <Link href={`payment/${props.name}`}>
         <div className={styles.operatorcard}>
-          <P size="l" className={styles.name}>
+          <P $l className={styles.name}>
             {stringSize(props.name)}
           </P>
           {props.image ? (

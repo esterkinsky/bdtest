@@ -1,8 +1,8 @@
-import React, { FormEvent, useState } from "react";
+import React from "react";
 import styles from "./HomeOperators.module.css";
 import { Operators } from "@/components/Operators/Operators";
 import { AddOperator } from "@/components/NewOperator/AddOperator";
-import { P } from "@/components/UI/P/P";
+import { P } from '@/components/UI';
 
 export const HomeOperators: React.FC = () => {
   return (
@@ -11,7 +11,7 @@ export const HomeOperators: React.FC = () => {
         <div className={styles.description}>
           <div>
             <h1>Description</h1>
-            <P size="s">description text</P>
+            <P $l>description text</P>
           </div>
         </div>
         <div className={styles.operatorsdiv}>
