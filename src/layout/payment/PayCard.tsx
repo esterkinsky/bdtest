@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { Preloader } from "../Preloader/Preloader";
 import styles from "./PayCard.module.css";
 import { Button } from "@/components/UI/Button/Button";
-import { Alert, Input } from "@/components";
+import { Alert} from "@/components";
 
 export function PayCard() {
   const [phoneState, setPhoneState] = useState<string>("");
@@ -26,6 +26,7 @@ export function PayCard() {
   }) => {
     setAmountState(event.target.value);
   };
+
   const handleInputNumber = (event: {
     target: { value: React.SetStateAction<string> };
   }) => {
@@ -60,9 +61,7 @@ export function PayCard() {
         phoneState.toLocaleLowerCase()
       );
       const isValidCard = /\d{4}\s\d{4}\s\d{4}\s\d{4}/.test(cardState);
-      const isValidAmount = /^(?!0+\s*$)(?!1000$)\d{1,3}$/.test(
-        amountState.replace(/\s+/g, "")
-      );
+	  const isValidCash = /^(?!0$)[1-9]\d{0,2}$|^1000$/.test(amountState);
 
       if (!isValidPhone) {
         setAlertName("Your mobile number is not valid");
@@ -78,10 +77,11 @@ export function PayCard() {
         return;
       }
 
-      if (!isValidAmount) {
+      if (!isValidCash) {
         setAlertName("Payment amount must be from 1 to 1000 rubles");
         setIsLoading(false);
         setAmountState("");
+		return;
       }
 
       if (!isPayedState) {
@@ -127,9 +127,9 @@ export function PayCard() {
               className={styles.input}
             />
             <InputMask
-              mask=""
-              type={"text"}
-              placeholder={"1.00. - 1000.00 rub."}
+              mask="9999"
+              type="text"
+              placeholder="Amount"
               value={amountState}
               onChange={handleIputAmount}
               className={styles.input}
